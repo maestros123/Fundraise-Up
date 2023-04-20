@@ -1,0 +1,235 @@
+.settings {
+  margin-top: 24px;
+
+  &__menu {
+    display: flex;
+    padding: 32px 24px 0;
+    border-bottom: 1px solid #DBDCDE;
+  }
+
+  &__item {
+    padding: 16px 15px 14px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.39px;
+    border: 1px solid white;
+    margin-bottom: -1px;
+    border-bottom: 1px solid #DBDCDE;
+
+    &.active {
+      color: #00A651;
+      border: 1px solid #DBDCDE;
+      border-radius: 6px 6px 0 0;
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+  &__behavior {
+    padding: 39px 30px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 24px;
+
+    &--last {
+      margin-top: 29px;
+      margin-bottom: 3px;
+    }
+
+    &--checkbox {
+      margin-top: 27px;
+      align-items: start;
+      margin-bottom: 34px;
+
+      .settings__right {
+        margin-top: -2px;
+        margin-left: 14px;
+      }
+    }
+  }
+
+  &__left {
+    text-align: right;
+    width: 154px;
+  }
+
+  &__right {
+    display: flex;
+    text-align: left;
+    margin-left: 15px;
+    flex-wrap: wrap;
+  }
+
+  &__select {
+    display: block;
+    font-size: 16px;
+    font-family: 'Work Sans', sans-serif;
+    color: #2F2F30;
+    padding: 9.5px 32px 9.5px 11px;
+    border: 1px solid #dbdcde;
+    border-radius: 6px;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('../../images/arrow.svg');
+    background-repeat: no-repeat, repeat;
+    background-position: right 11px top 50%, 0 0;
+    background-size: 9px;
+
+    &--big {
+      padding-right: 94.5px;
+    }
+
+  }
+
+  &__input {
+    width: 167px;
+    display: block;
+    font-size: 16px;
+    font-family: 'Work Sans', sans-serif;
+    color: #2F2F30;
+    padding: 8px 12px;
+    border: 1px solid #dbdcde;
+    border-radius: 6px;
+    margin-right: 24px;
+  }
+
+  &__radio {
+    width: 100%;
+    margin-bottom: 18px;
+
+    input {
+      position: absolute;
+      opacity: 0;
+
+      &:checked + label::before {
+        outline: 2px solid #2EB670;
+        background-image: url("../../images/Rect.svg");
+        background-repeat: no-repeat;
+        background-position: 50%;
+      }
+
+      & + label {
+        display: flex;
+        align-items: center;
+
+        &:before {
+          content: '';
+          width: 22.5px;
+          height: 22.5px;
+          outline: 1px solid #A9ABAE;
+          border-radius: 50%;
+          margin-right: 13.5px;
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+
+  &__checkbox {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 1px;
+
+    input {
+      position: absolute;;
+      opacity: 0;
+
+      &:checked + label::before {
+        outline: 2px solid #2EB670;
+        background-image: url("../../images/check2.svg");
+        background-repeat: no-repeat;
+        background-position: 50%;
+      }
+      &:disabled+label::before {
+        background-color: #e9ecef;
+      }
+
+      & + label {
+        display: flex;
+        align-items: center;
+
+        &:before {
+          content: '';
+          width: 22px;
+          height: 22px;
+          outline: 1px solid #A9ABAE;
+          border-radius: 4px;
+          margin-right: 13.5px;
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+
+  &__range {
+    display: flex;
+    align-items: center;
+
+    input {
+      -webkit-appearance: none;
+      height: 3px;
+      border-radius: 8px;
+      background-color: #DBDCDE;
+      width: 218px;
+      margin-right: 17px;
+
+      &::-webkit-slider-thumb {
+        appearance: none;
+        width: 19px;
+        height: 19px;
+        border:none;
+        border-radius: 50%;
+        background: #2EB670;
+        cursor: pointer;
+      }
+      &::-moz-range-thumb {
+        appearance: none;
+        width: 19px;
+        height: 19px;
+        border:none;
+        border-radius: 50%;
+        background: #2EB670;
+        cursor: pointer;
+      }
+    }
+
+
+  }
+  &__range-value {
+    position: absolute;
+    width: 140px;
+    height: 3px;
+    background-color: #2EB670;
+    border-radius: 8px;
+  }
+
+  &__footer {
+    display: flex;
+    padding: 24px 31px;
+    background-color: #FFFBEC;
+    border-top: 1px solid #DBDCDE;
+
+    button {
+      padding: 13px 25px;
+      font-size: 16px;
+      font-family: 'Work Sans', sans-serif;
+      border-radius: 6px;
+    }
+  }
+  &__save {
+    border: none;
+    background-color: #2EB670;
+    color: #fff;
+  }
+  &__cancel {
+    width: 104px;
+    margin-left: 14px;
+    background-color: #fff;
+    border: 1px solid #A9ABAE;
+  }
+
+}

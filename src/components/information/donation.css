@@ -1,0 +1,94 @@
+.donation {
+  width: 934px;
+  margin-top: 24px;
+  font-size: 16px;
+}
+.donation__top {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 32px;
+  margin-bottom: 1px;
+}
+.donation__bottom {
+  padding: 17px 32px;
+  display: flex;
+  align-items: center;
+  background-color: #FAFAFA;
+  border-top: 1px solid #DBDCDE;
+}
+.donation__title {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.donation__title img {
+  margin-right: 8px;
+}
+.donation__amount {
+  margin-top: 7px;
+  font-size: 24px;
+  color: #00A651;
+}
+.donation__amount span {
+  margin-left: 1px;
+  font-size: 16px;
+  color: #6C6D6F;
+}
+.donation__info {
+  font-family: "Source Code Pro", sans-serif;
+  margin-right: -1px;
+}
+.donation__id {
+  color: #919293;
+  margin-bottom: 6px;
+  margin-top: -1px;
+}
+.donation__id-number {
+  display: flex;
+  align-items: center;
+  color: #2F2F30;
+}
+.donation__id-number:after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url("../../images/copy.svg");
+  margin-left: 8px;
+}
+.donation__item {
+  padding: 0 31.5px;
+  border-left: 1px solid #D7D8DA;
+}
+.donation__item--first {
+  padding: 0 13px 0 0;
+  border: none;
+  margin-left: -1px;
+}
+.donation__name {
+  font-size: 14px;
+  color: #6C6D6F;
+  margin-bottom: 6px;
+  margin-top: 1px;
+}
+.donation__status {
+  display: flex;
+  align-items: center;
+}
+.donation__status--succeeded {
+  color: #00A651;
+}
+.donation__status--succeeded:before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url("../../images/check.svg");
+  margin-right: 8px;
+}
+.donation__supporter {
+  color: #6665DD;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=donation.css.map */

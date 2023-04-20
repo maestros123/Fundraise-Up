@@ -1,0 +1,26 @@
+.controls {
+  width: 264px;
+  position: sticky;
+  top: 0;
+  margin: 24px 0 0 24px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 15.4px 15px;
+    border-top: 1px solid #DBDCDE;
+    cursor: pointer;
+
+    &--first {
+      border: none;
+    }
+
+    &.active {
+      background-color: #F3F3F3;
+    }
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+}

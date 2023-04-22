@@ -1,5 +1,6 @@
 import './donation.scss';
 import dollar from '../../images/dollar.svg'
+import copy from '../../images/copy.svg'
 
 export const Donation = () => {
     return (
@@ -14,7 +15,7 @@ export const Donation = () => {
                 </div>
                 <div className="donation__info">
                     <div className="donation__id">ID</div>
-                    <div className="donation__id-number">TYNY694Y</div>
+                    <div className="donation__id-number">TYNY694Y <a href="#"><img src={copy} alt="copy ID"/></a></div>
                 </div>
             </div>
             <div className="donation__bottom">
@@ -24,11 +25,11 @@ export const Donation = () => {
                 </div>
                 <div className="donation__item">
                     <div className="donation__name">Supporter</div>
-                    <div className="donation__supporter">Charlotte Ann</div>
+                    <a href='#' className="donation__supporter">Charlotte Ann</a>
                 </div>
                 <div className="donation__item">
                     <div className="donation__name">Campaign</div>
-                    <div className="donation__supporter">Heart walk</div>
+                    <a href='#' className="donation__supporter">Heart walk</a>
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 .settings {
   margin-top: 24px;
+  margin-bottom: 24px;
 }
 .settings__menu {
   display: flex;
@@ -15,6 +16,7 @@
   border: 1px solid white;
   margin-bottom: -1px;
   border-bottom: 1px solid #DBDCDE;
+  cursor: pointer;
 }
 .settings__item.active {
   color: #00A651;
@@ -84,15 +86,20 @@
   margin-right: 24px;
 }
 .settings__radio {
+  display: flex;
+  align-items: center;
   width: 100%;
   margin-bottom: 18px;
 }
 .settings__radio input {
+  -webkit-appearance: none;
+  width: 22.5px;
+  height: 22.5px;
   position: absolute;
-  opacity: 0;
+  margin-left: 2px;
 }
-.settings__radio input:checked + label::before {
-  outline: 2px solid #2EB670;
+.settings__radio input:checked + .settings__round {
+  border: 2px solid #2EB670;
   background-image: url("../../images/Rect.svg");
   background-repeat: no-repeat;
   background-position: 50%;
@@ -101,26 +108,31 @@
   display: flex;
   align-items: center;
 }
-.settings__radio input + label:before {
-  content: "";
+.settings__round {
+  display: block;
   width: 22.5px;
   height: 22.5px;
-  outline: 1px solid #A9ABAE;
+  border: 1px solid #A9ABAE;
   border-radius: 50%;
   margin-right: 13.5px;
   margin-left: 2px;
+  box-sizing: border-box;
 }
 .settings__checkbox {
   width: 100%;
-  margin-top: 8px;
+  margin-top: 7px;
   margin-bottom: 1px;
 }
 .settings__checkbox input {
   position: absolute;
-  opacity: 0;
+  -webkit-appearance: none;
+  display: block;
+  width: 23px;
+  height: 23px;
+  margin-left: 2px;
 }
 .settings__checkbox input:checked + label::before {
-  outline: 2px solid #2EB670;
+  border: 2px solid #2EB670;
   background-image: url("../../images/check2.svg");
   background-repeat: no-repeat;
   background-position: 50%;
@@ -134,12 +146,13 @@
 }
 .settings__checkbox input + label:before {
   content: "";
-  width: 22px;
-  height: 22px;
-  outline: 1px solid #A9ABAE;
+  width: 23px;
+  height: 23px;
+  border: 1px solid #A9ABAE;
   border-radius: 4px;
-  margin-right: 13.5px;
+  margin-right: 13px;
   margin-left: 2px;
+  box-sizing: border-box;
 }
 .settings__range {
   display: flex;
@@ -152,6 +165,9 @@
   background-color: #DBDCDE;
   width: 218px;
   margin-right: 17px;
+  background-image: linear-gradient(#2EB670, #2EB670);
+  background-size: 65% 100%;
+  background-repeat: no-repeat;
 }
 .settings__range input::-webkit-slider-thumb {
   appearance: none;
@@ -171,12 +187,23 @@
   background: #2EB670;
   cursor: pointer;
 }
-.settings__range-value {
-  position: absolute;
-  width: 140px;
-  height: 3px;
-  background-color: #2EB670;
-  border-radius: 8px;
+.settings__range input::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+.settings__range input::-moz-range-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+.settings__range input::-ms-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
 }
 .settings__footer {
   display: flex;
@@ -200,6 +227,91 @@
   margin-left: 14px;
   background-color: #fff;
   border: 1px solid #A9ABAE;
+}
+
+@media screen and (max-width: 480px) {
+  .settings {
+    width: auto;
+    margin: 10px;
+  }
+  .settings__menu {
+    align-items: center;
+    padding: 15px 20px;
+    overflow: scroll;
+  }
+  .settings__item {
+    padding: 7px;
+    border-bottom: none;
+    text-align: center;
+  }
+  .settings__item.active {
+    border-radius: 6px;
+    border-bottom: 1px solid #DBDCDE;
+  }
+  .settings__behavior {
+    padding: 15px 20px;
+  }
+  .settings__wrapper {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .settings__wrapper--checkbox {
+    margin-top: 10px;
+  }
+  .settings__wrapper--checkbox .settings__right {
+    margin-left: 0;
+  }
+  .settings__wrapper--last {
+    margin-top: 5px;
+  }
+  .settings__left {
+    width: 100%;
+    text-align: left;
+    margin: 0 0 5px;
+  }
+  .settings__right {
+    width: 100%;
+    margin: 0;
+  }
+  .settings__range {
+    position: relative;
+  }
+  .settings__range input {
+    width: 80%;
+    margin-right: 10px;
+  }
+  .settings__range input::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+  }
+  .settings__range input::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+  }
+  .settings__select {
+    padding: 7px 20px 7px 10px;
+    background-position: right 5px top 50%, 0 0;
+  }
+  .settings__input {
+    padding: 7px 10px;
+    margin-right: 10px;
+    max-width: 55%;
+  }
+  .settings__round {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-size: 50%;
+  }
+  .settings__radio {
+    margin-bottom: 10px;
+  }
+  .settings__footer {
+    padding: 15px 20px;
+  }
+  .settings__footer button {
+    padding: 10px;
+  }
 }
 
 /*# sourceMappingURL=settings.css.map */

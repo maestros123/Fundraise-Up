@@ -1,12 +1,12 @@
 .App {
   width: 1222px;
 }
-
 .container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
 
 @media screen and (max-width: 480px) {
   .App {
@@ -14,18 +14,17 @@
   }
   .container {
     flex-wrap: wrap;
-  }
-  .container__main {
-    width: 100%;
-    order: 2;
-  }
-  .container__aside {
-    width: 100%;
-    order: 1;
+
+    &__main {
+      width: 100%;
+      order:2;
+    }
+    &__aside {
+      width: 100%;
+      order: 1;
+    }
   }
   .App:last-child {
     margin-bottom: 65px;
   }
 }
-
-/*# sourceMappingURL=App.css.map */

@@ -6,12 +6,10 @@ export const Search = () => {
             <div className="search__top">
                 <p className="search__title">Donations</p>
             </div>
-            <div className="search__bottom">
+            <form className="search__bottom">
                 <div className="search__input">
-                    <form action="">
                         <button></button>
                         <input type="text" placeholder="Search"/>
-                    </form>
                 </div>
                 <div className="search__status">
                     <select className="search__select">
@@ -20,7 +18,7 @@ export const Search = () => {
                         <option>Option 3</option>
                     </select>
                 </div>
-            </div>
+            </form>
 
         </div>
     )

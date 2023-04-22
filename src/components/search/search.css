@@ -24,7 +24,7 @@
   position: relative;
 }
 .search__input button {
-  background: url("../../images/search.png");
+  background: url("../../images/search.svg") no-repeat;
   width: 18px;
   height: 18px;
   border: 0;
@@ -55,6 +55,28 @@
   background-color: inherit;
   font-size: 16px;
   font-family: "Work Sans", sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+  .search {
+    width: 100%;
+    font-size: 16px;
+    margin: 10px 10px 0;
+  }
+  .search__top {
+    padding: 15px 20px;
+  }
+  .search__bottom {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
+  .search__input {
+    width: 100%;
+  }
+  .search__status {
+    width: 100%;
+    margin: 10px 0 0;
+  }
 }
 
 /*# sourceMappingURL=search.css.map */

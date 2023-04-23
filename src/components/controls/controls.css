@@ -11,11 +11,11 @@
   border-top: 1px solid #DBDCDE;
   cursor: pointer;
 }
+.controls__item:first-child {
+  border: none;
+}
 .controls__item:hover {
   background-color: #F3F3F3;
-}
-.controls__item--first {
-  border: none;
 }
 .controls__item.active {
   background-color: #F3F3F3;

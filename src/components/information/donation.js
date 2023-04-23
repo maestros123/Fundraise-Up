@@ -15,7 +15,7 @@ export const Donation = () => {
                 </div>
                 <div className="donation__info">
                     <div className="donation__id">ID</div>
-                    <div className="donation__id-number">TYNY694Y <a href="#"><img src={copy} alt="copy ID" aria-label="copy ID donation"/></a></div>
+                    <div className="donation__id-number">TYNY694Y <a href="#" tabIndex="0"><img src={copy} alt="copy ID" aria-label="copy ID donation"/></a></div>
                 </div>
             </div>
             <div className="donation__bottom">
@@ -25,11 +25,11 @@ export const Donation = () => {
                 </div>
                 <div className="donation__item">
                     <div className="donation__name">Supporter</div>
-                    <a href='#' className="donation__supporter" aria-label="Donator name">Charlotte Ann</a>
+                    <a href='#' className="donation__supporter" aria-label="Donator name" tabIndex="0">Charlotte Ann</a>
                 </div>
                 <div className="donation__item">
                     <div className="donation__name">Campaign</div>
-                    <a href='#' className="donation__supporter" aria-label="Donator company name">Heart walk</a>
+                    <a href='#' className="donation__supporter" aria-label="Donator company name" tabIndex="0">Heart walk</a>
                 </div>
             </div>
         </div>

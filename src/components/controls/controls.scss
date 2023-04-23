@@ -11,12 +11,12 @@
     border-top: 1px solid #DBDCDE;
     cursor: pointer;
 
-    &:hover {
-      background-color: #F3F3F3;
+    &:first-child {
+      border: none;
     }
 
-    &--first {
-      border: none;
+    &:hover {
+      background-color: #F3F3F3;
     }
 
     &.active {

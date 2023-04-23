@@ -8,11 +8,11 @@ export const Search = () => {
             </div>
             <form className="search__bottom">
                 <div className="search__input">
-                        <button aria-label="button submit search"></button>
-                        <input type="text" placeholder="Search" aria-label="Search input"/>
+                        <button aria-label="button submit search" tabIndex="0"></button>
+                        <input type="text" placeholder="Search" aria-label="Search input" tabIndex="0"/>
                 </div>
                 <div className="search__status">
-                    <select className="search__select" aria-label="Search input" aria-describedby="search-select-description">
+                    <select className="search__select" aria-label="Search input" aria-describedby="search-select-description" tabIndex="0">
                         <option value="all" aria-describedby="search-select-all">All statuses</option>
                         <option value="option2" aria-describedby="search-select-option2">Option 2</option>
                         <option value="option3" aria-describedby="search-select-option3">Option 3</option>

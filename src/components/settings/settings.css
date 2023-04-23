@@ -70,6 +70,7 @@
   background-repeat: no-repeat, repeat;
   background-position: right 11px top 50%, 0 0;
   background-size: 9px;
+  cursor: pointer;
 }
 .settings__select--big {
   padding-right: 94.5px;
@@ -97,6 +98,7 @@
   height: 24px;
   position: absolute;
   margin-left: 2px;
+  cursor: pointer;
 }
 .settings__radio input:checked + .settings__round {
   border: 2px solid #2EB670;
@@ -130,6 +132,7 @@
   width: 23px;
   height: 23px;
   margin-left: 2px;
+  cursor: pointer;
 }
 .settings__checkbox input:checked + label::before {
   border: 2px solid #2EB670;
@@ -175,6 +178,7 @@
   height: 19px;
   border: none;
   border-radius: 50%;
+  box-shadow: none;
   background: #2EB670;
   cursor: pointer;
 }
@@ -183,6 +187,17 @@
   width: 19px;
   height: 19px;
   border: none;
+  box-shadow: none;
+  border-radius: 50%;
+  background: #2EB670;
+  cursor: pointer;
+}
+.settings__range input::-ms-track {
+  appearance: none;
+  width: 19px;
+  height: 19px;
+  border: none;
+  box-shadow: none;
   border-radius: 50%;
   background: #2EB670;
   cursor: pointer;
@@ -216,6 +231,7 @@
   font-size: 16px;
   font-family: "Work Sans", sans-serif;
   border-radius: 6px;
+  cursor: pointer;
 }
 .settings__save {
   border: none;

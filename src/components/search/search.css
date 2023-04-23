@@ -48,14 +48,21 @@
   color: #6C6D6F;
 }
 .search__status {
-  margin-left: 35.5px;
+  margin-left: 39.3px;
 }
 .search__select {
-  background-color: #FAFAFA;
+  -webkit-appearance: none;
   border: none;
-  font-family: Work Sans, sans-serif;
   font-size: 16px;
+  font-family: "Work Sans", sans-serif;
   color: #2F2F30;
+  padding: 10px 30px 10px 0;
+  background-color: #FAFAFA;
+  background-image: url("../../images/arrow.svg");
+  background-repeat: no-repeat, repeat;
+  background-position: right 14px top 50%, 0 0;
+  background-size: 9px;
+  cursor: pointer;
 }
 
 @media (min-width: 992px) and (max-width: 1230px) {

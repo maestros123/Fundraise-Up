@@ -3,16 +3,20 @@ import {useState} from "react";
 
 export const Settings = () => {
 
-    const [inputValue, setInputValue] = useState([2,15])
+    const [inputValue, setInputValue] = useState([2, 15])
 
     const inputSize = <>
-        <input type="range" id="size" name="size" min="0" max="3" defaultValue="2" onInput={handleInputChange}/>
-        <output>{inputValue[0]}</output><span>px</span>
+        <input type="range" id="size" name="size" min="0" max="3" defaultValue="2"
+               aria-label="Border size" aria-valuemin="0" aria-valuemax="3" aria-valuenow="2" aria-valuetext="2" onInput={handleInputChange}/>
+        <output aria-live="polite">{inputValue[0]}</output>
+        <span>px</span>
     </>
 
     const inputRadius = <>
-        <input type="range" id="size" name="radius" min="0" max="23" defaultValue="15" onInput={handleInputChange}/>
-        <output>{inputValue[1]}</output><span>px</span>
+        <input type="range" id="size" name="radius" min="0" max="23" defaultValue="15"
+               aria-label="Border radius" aria-valuemin="0" aria-valuemax="23" aria-valuenow="15" aria-valuetext="15"  onInput={handleInputChange}/>
+        <output aria-live="polite">{inputValue[1]}</output>
+        <span>px</span>
     </>
 
 
@@ -35,54 +39,94 @@ export const Settings = () => {
         setInputValue(newArray);
     }
 
+    const [activeItem, setActiveitem] = useState(0);
+
+    const itemsData = ['Behavior', 'Appearance', 'Custom Fields', 'Questions', 'URL Control'];
+
+    function handleActive(i) {
+        setActiveitem(i)
+    }
+
+    const items = itemsData.map((item, i) => {
+        const itemClass = activeItem === i ? 'settings__item active' : 'settings__item';
+        return (
+            <div key={i} onClick={() => handleActive(i)} className={itemClass} tabIndex="0"
+                 aria-label={item + ' settings button'}>
+                {item}
+            </div>
+        )
+    })
+
 
     return (
         <div className="settings element">
             <div className="settings__menu">
-                <div className="settings__item active" tabIndex="0">Behavior</div>
-                <div className="settings__item" tabIndex="0">Appearance</div>
-                <div className="settings__item" tabIndex="0">Custom Fields</div>
-                <div className="settings__item" tabIndex="0">Questions</div>
-                <div className="settings__item" tabIndex="0">URL Control</div>
+                {items}
             </div>
             <form className="settings__behavior">
                 <div className="settings__wrapper">
                     <div className="settings__left">Designation</div>
                     <div className="settings__right">
-                        <select name="" id="" className="settings__select  settings__select--big">
-                            <option>Match Checkout Setting</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
+                        <select name="Designation" className="settings__select  settings__select--big"
+                                aria-label="Designation checkout settings"
+                                aria-describedby="settings-select-description">
+                            <option value="Match Checkout Setting"
+                                    aria-describedby="settings-select-match-checkout">Match Checkout Setting
+                            </option>
+                            <option value="Option 2" aria-describedby="settings-select-option2">Option 2</option>
+                            <option value="Option 3" aria-describedby="settings-select-option3">Option 3</option>
                         </select>
+
+                        <div className="aria-description">
+                            <span
+                                id="settings-select-match-checkout">This option will match the checkout settings.</span>
+                            <span id="settings-select-option2">Option 2 description goes here.</span>
+                            <span id="settings-select-option3">Option 3 description goes here.</span>
+                            <span
+                                id="settings-select-description">Select a setting for matching checkout settings.</span>
+                        </div>
                     </div>
                 </div>
                 <div className="settings__wrapper">
                     <div className="settings__left">Goal</div>
                     <div className="settings__right">
-                        <input className="settings__input" type="text" defaultValue="$10.00"/>
-                        <select name="" id="" className="settings__select">
-                            <option>USD</option>
-                            <option>EUR</option>
+                        <input className="settings__input" type="text" defaultValue="$10.00"  id="amount" aria-label="Amount"/>
+                        <select name="currency" className="settings__select" aria-label="Currency"
+                                aria-describedby="settings-select-description">
+                            <option value="USD" aria-describedby="settings-select-usd">USD</option>
+                            <option value="EUR" aria-describedby="settings-select-eur">EUR</option>
                         </select>
+                        <div className="aria-description">
+                            <span id="settings-select-usd">US Dollar</span>
+                            <span id="settings-select-eur">Euro</span>
+                            <span id="settings-select-description">Select your preferred currency</span>
+                        </div>
                     </div>
                 </div>
 
                 <div className="settings__wrapper settings__wrapper--checkbox">
                     <div className="settings__left">Default Amount</div>
-                    <div className="settings__right">
+                    <div className="settings__right" aria-label="Settings options">
+                        <legend className="aria-description">Select a setting:</legend>
                         <div className="settings__radio">
-                            <input type="radio" name="radio" value="1" id="radio-1" />
+                            <input type="radio" name="radio" value="1" id="radio-1"
+                                   aria-describedby="radio-1-description"/>
                             <span className="settings__round"></span>
                             <label htmlFor="radio-1">Match Checkout Setting</label>
+                            <span className="aria-description" id="radio-1-description">Select this option to match the checkout settings.</span>
                         </div>
                         <div className="settings__radio">
-                            <input type="radio" name="radio" value="1" id="radio-2" defaultChecked/>
+                            <input type="radio" name="radio" value="1" id="radio-2" defaultChecked
+                                   aria-describedby="radio-2-description"/>
                             <span className="settings__round"></span>
                             <label htmlFor="radio-2">Customize</label>
+                            <span className="aria-description" id="radio-2-description">Select this option to customize your settings.</span>
                         </div>
                         <div className="settings__checkbox">
-                            <input type="checkbox" name="checkbox" value="1" id="checkbox" defaultChecked/>
+                            <input type="checkbox" name="checkbox" value="1" id="checkbox" defaultChecked
+                                   aria-describedby="checkbox-description"/>
                             <label htmlFor="checkbox">Allow donor to change default currency</label>
+                            <span className="aria-description" id="checkbox-description">Select this option to allow donors to change their default currency.</span>
                         </div>
                     </div>
                 </div>
@@ -102,8 +146,8 @@ export const Settings = () => {
 
             </form>
             <div className="settings__footer">
-                <button className="settings__save">Save changes</button>
-                <button className="settings__cancel">Cancel</button>
+                <button className="settings__save" aria-label="Save changes button">Save changes</button>
+                <button className="settings__cancel" aria-label="Cancel changes button">Cancel</button>
             </div>
         </div>
     )

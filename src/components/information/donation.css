@@ -90,6 +90,47 @@
   text-decoration: underline;
 }
 
+@media (min-width: 992px) and (max-width: 1230px) {
+  .donation {
+    width: auto;
+    margin: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .donation {
+    width: auto;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .donation {
+    width: auto;
+    margin: 10px;
+  }
+  .donation__top {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
+  .donation__amount {
+    font-size: 20px;
+  }
+  .donation__bottom {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
+  .donation__item {
+    width: 33.3%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  .donation__item--first {
+    padding: 0 10px 0 0;
+  }
+  .donation__name {
+    margin-bottom: 2px;
+    margin-top: 0;
+  }
+}
 @media screen and (max-width: 480px) {
   .donation {
     width: auto;

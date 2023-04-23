@@ -1,12 +1,53 @@
 .App {
   width: 1222px;
+  color: #2F2F30;
 }
 .container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
+.aria-description {
+  visibility: hidden;
+  position: absolute;
+}
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .App {
+    width: 100%;
+  }
+  .container {
+    justify-content: inherit;
+    &__main {
+      width: 70%;
+    }
+    &__aside {
+      width: 30%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .App {
+    width: 100%;
+  }
+  .container {
+    display: block;
+    flex-wrap: wrap;
+
+    &__main {
+      width: 100%;
+    }
+    &__aside {
+      width: 100%;
+    }
+  }
+
+  .App:last-child {
+    margin-bottom: 65px;
+  }
+}
 
 @media screen and (max-width: 480px) {
   .App {
@@ -17,11 +58,9 @@
 
     &__main {
       width: 100%;
-      order:2;
     }
     &__aside {
       width: 100%;
-      order: 1;
     }
   }
   .App:last-child {

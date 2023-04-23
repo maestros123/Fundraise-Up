@@ -103,12 +103,12 @@
     display: flex;
     align-items: center;
     width: 100%;
-    margin-bottom: 18px;
+    margin-bottom: 16.5px;
 
     input {
       -webkit-appearance: none;
-      width: 22.5px;
-      height: 22.5px;
+      width: 24px;
+      height: 24px;
       position: absolute;
       margin-left: 2px;
 
@@ -116,7 +116,7 @@
         border: 2px solid #2EB670;
         background-image: url("../../images/Rect.svg");
         background-repeat: no-repeat;
-        background-position: 50%;
+        background-position: 50% 50%;
       }
 
       & + label {
@@ -128,11 +128,11 @@
 
   &__round {
     display: block;
-    width: 22.5px;
-    height: 22.5px;
+    width: 24px;
+    height: 24px;
     border: 1px solid #A9ABAE;
     border-radius: 50%;
-    margin-right: 13.5px;
+    margin-right: 12px;
     margin-left: 2px;
     box-sizing: border-box;
   }
@@ -260,6 +260,140 @@
   }
 
 }
+@media (min-width: 992px) and (max-width: 1230px) {
+  .settings {
+    width: auto;
+    margin: 10px;
+
+    &__left {
+      width: 25%;
+    }
+    &__right {
+      width: 75%;
+      text-align: left;
+    }
+
+    &__item {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .settings {
+    width: auto;
+    margin: 10px;
+
+    &__left {
+      width: 30%;
+      text-align: left;
+    }
+    &__right {
+      width: 70%;
+      text-align: left;
+    }
+
+    &__item {
+      text-align: center;
+    }
+  }
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .settings {
+    width: auto;
+    margin: 10px;
+
+    &__menu {
+      align-items: center;
+      padding: 15px 20px;
+      overflow: scroll;
+    }
+    &__item {
+      padding: 7px;
+      border-bottom: none;
+      text-align: center;
+
+      &.active {
+        border-radius: 6px;
+        border-bottom: 1px solid #DBDCDE;
+      }
+    }
+    &__behavior {
+      padding: 15px 20px;
+    }
+    &__wrapper {
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+
+      &--checkbox {
+        margin-top: 10px;
+
+        .settings__right {
+          margin-left: 0;
+        }
+      }
+      &--last {
+        margin-top: 5px;
+      }
+    }
+    &__left {
+      text-align: left;
+      margin: 0 0 5px;
+    }
+    &__right {
+      margin: 0;
+    }
+
+    &__range {
+      position: relative;
+
+      input {
+        //width: 80%;
+        margin-right: 10px;
+
+        &::-webkit-slider-thumb {
+          width: 15px;
+          height: 15px;
+        }
+        &::-moz-range-thumb {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+
+    &__select {
+      padding: 7px 20px 7px 10px;
+      background-position: right 5px top 50%, 0 0;
+    }
+    &__input {
+      padding: 7px 10px;
+      margin-right: 10px;
+      max-width: 55%;
+    }
+    &__round {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      background-size: 50%;
+    }
+    &__radio {
+      margin-bottom: 10px;
+    }
+    &__footer {
+      padding: 15px 20px;
+
+      button {
+        padding: 10px;
+      }
+    }
+  }
+}
+
 
 @media screen and (max-width: 480px) {
   .settings {

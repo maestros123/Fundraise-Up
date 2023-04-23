@@ -28,6 +28,44 @@
     }
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .controls {
+    width: auto;
+    margin: 10px 10px 10px 0;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .controls {
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    display: flex;
+    border-radius: 0;
+    box-shadow: none;
+
+    &__item {
+      width: 25%;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      text-align: center;
+      font-size: 12px;
+      padding: 7px;
+      border: none;
+      border-left: 1px solid #DBDCDE;
+
+      svg {
+        width: 100%;
+        margin-bottom: 7px;
+        margin-right: 0;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 480px) {
   .controls {

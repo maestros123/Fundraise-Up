@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Fundraise-Up/static/css/main.e15afa6f.css",
+    "main.js": "/Fundraise-Up/static/js/main.8624e8e8.js",
+    "static/js/787.f42c70aa.chunk.js": "/Fundraise-Up/static/js/787.f42c70aa.chunk.js",
+    "index.html": "/Fundraise-Up/index.html",
+    "static/media/copy.svg": "/Fundraise-Up/static/media/copy.8121f6157ade0e636dc9611e159685d6.svg",
+    "static/media/dollar.svg": "/Fundraise-Up/static/media/dollar.33d291c7f6d72234d75d615092faef5e.svg",
+    "static/media/search.svg": "/Fundraise-Up/static/media/search.2c98831810b6c5533d88.svg",
+    "static/media/check.svg": "/Fundraise-Up/static/media/check.0e3f3349e1d3f0f01ba8.svg",
+    "static/media/Rect.svg": "/Fundraise-Up/static/media/Rect.0723997fa7d0686cb4f9.svg",
+    "static/media/check2.svg": "/Fundraise-Up/static/media/check2.1ebc7e9aacc152651c4b.svg",
+    "static/media/arrow.svg": "/Fundraise-Up/static/media/arrow.0bd50afaf72bb9fcf2b9.svg",
+    "main.e15afa6f.css.map": "/Fundraise-Up/static/css/main.e15afa6f.css.map",
+    "main.8624e8e8.js.map": "/Fundraise-Up/static/js/main.8624e8e8.js.map",
+    "787.f42c70aa.chunk.js.map": "/Fundraise-Up/static/js/787.f42c70aa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e15afa6f.css",
+    "static/js/main.8624e8e8.js"
+  ]
+}

@@ -6,14 +6,14 @@ export const Settings = () => {
     const [inputValue, setInputValue] = useState([2, 15])
 
     const inputSize = <>
-        <input type="range" id="size" name="size" min="0" max="3" defaultValue="2"
+        <input type="range" id="size" name="size" min="0" max="3" defaultValue="2" tabIndex="0"
                aria-label="Border size" aria-valuemin="0" aria-valuemax="3" aria-valuenow="2" aria-valuetext="2" onInput={handleInputChange}/>
         <output aria-live="polite">{inputValue[0]}</output>
         <span>px</span>
     </>
 
     const inputRadius = <>
-        <input type="range" id="size" name="radius" min="0" max="23" defaultValue="15"
+        <input type="range" id="size" name="radius" min="0" max="23" defaultValue="15" tabIndex="0"
                aria-label="Border radius" aria-valuemin="0" aria-valuemax="23" aria-valuenow="15" aria-valuetext="15"  onInput={handleInputChange}/>
         <output aria-live="polite">{inputValue[1]}</output>
         <span>px</span>
@@ -69,7 +69,7 @@ export const Settings = () => {
                     <div className="settings__right">
                         <select name="Designation" className="settings__select  settings__select--big"
                                 aria-label="Designation checkout settings"
-                                aria-describedby="settings-select-description">
+                                aria-describedby="settings-select-description" tabIndex="0">
                             <option value="Match Checkout Setting"
                                     aria-describedby="settings-select-match-checkout">Match Checkout Setting
                             </option>
@@ -90,9 +90,9 @@ export const Settings = () => {
                 <div className="settings__wrapper">
                     <div className="settings__left">Goal</div>
                     <div className="settings__right">
-                        <input className="settings__input" type="text" defaultValue="$10.00"  id="amount" aria-label="Amount"/>
+                        <input className="settings__input" type="text" defaultValue="$10.00"  id="amount" aria-label="Amount" tabIndex="0"/>
                         <select name="currency" className="settings__select" aria-label="Currency"
-                                aria-describedby="settings-select-description">
+                                aria-describedby="settings-select-description" tabIndex="0">
                             <option value="USD" aria-describedby="settings-select-usd">USD</option>
                             <option value="EUR" aria-describedby="settings-select-eur">EUR</option>
                         </select>
@@ -110,21 +110,21 @@ export const Settings = () => {
                         <legend className="aria-description">Select a setting:</legend>
                         <div className="settings__radio">
                             <input type="radio" name="radio" value="1" id="radio-1"
-                                   aria-describedby="radio-1-description"/>
+                                   aria-describedby="radio-1-description" tabIndex="0"/>
                             <span className="settings__round"></span>
                             <label htmlFor="radio-1">Match Checkout Setting</label>
                             <span className="aria-description" id="radio-1-description">Select this option to match the checkout settings.</span>
                         </div>
                         <div className="settings__radio">
                             <input type="radio" name="radio" value="1" id="radio-2" defaultChecked
-                                   aria-describedby="radio-2-description"/>
+                                   aria-describedby="radio-2-description" tabIndex="0"/>
                             <span className="settings__round"></span>
                             <label htmlFor="radio-2">Customize</label>
                             <span className="aria-description" id="radio-2-description">Select this option to customize your settings.</span>
                         </div>
                         <div className="settings__checkbox">
                             <input type="checkbox" name="checkbox" value="1" id="checkbox" defaultChecked
-                                   aria-describedby="checkbox-description"/>
+                                   aria-describedby="checkbox-description" tabIndex="0"/>
                             <label htmlFor="checkbox">Allow donor to change default currency</label>
                             <span className="aria-description" id="checkbox-description">Select this option to allow donors to change their default currency.</span>
                         </div>
@@ -146,8 +146,8 @@ export const Settings = () => {
 
             </form>
             <div className="settings__footer">
-                <button className="settings__save" aria-label="Save changes button">Save changes</button>
-                <button className="settings__cancel" aria-label="Cancel changes button">Cancel</button>
+                <button className="settings__save" aria-label="Save changes button" tabIndex="0">Save changes</button>
+                <button className="settings__cancel" aria-label="Cancel changes button" tabIndex="0">Cancel</button>
             </div>
         </div>
     )

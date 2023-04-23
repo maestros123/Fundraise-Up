@@ -28,6 +28,13 @@
     }
   }
 }
+@media (min-width: 992px) and (max-width: 1230px) {
+  .controls {
+    width: auto;
+    margin: 10px 10px 10px 0;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .controls {
     width: auto;
